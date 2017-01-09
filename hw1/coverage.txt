@@ -1,0 +1,76 @@
++   return(c(countint/10000
++   ,countslope/10000))
++ }
+> set.seed(1)
+> sigmas <- c(0.1,1,10,100)
+> rhos <- c(-0.9,-0.5,-0.25,0,0.25,0.5,0.9)
+> beta = c(1,-1)
+> for(sig in sigmas){
++   for(rho in rhos)
++   {
++     cat("coverage for ", sig, rho, probs(sig,rho),"\n")
++   }
++ }
+coverage for  0.1 -0.9 0.9999 1 
+coverage for  0.1 -0.5 0.9949 0.9935 
+coverage for  0.1 -0.25 0.98 0.9757 
+coverage for  0.1 0 0.9413 0.9432 
+coverage for  0.1 0.25 0.8797 0.884 
+coverage for  0.1 0.5 0.7739 0.7922 
+coverage for  0.1 0.9 0.3774 0.4258 
+coverage for  1 -0.9 0.9999 0.9999 
+coverage for  1 -0.5 0.9949 0.9939 
+coverage for  1 -0.25 0.9801 0.9752 
+coverage for  1 0 0.9397 0.9412 
+coverage for  1 0.25 0.8839 0.8911 
+coverage for  1 0.5 0.7818 0.7977 
+coverage for  1 0.9 0.3677 0.4276 
+coverage for  10 -0.9 1 1 
+coverage for  10 -0.5 0.9957 0.9938 
+coverage for  10 -0.25 0.9807 0.9757 
+coverage for  10 0 0.9447 0.942 
+coverage for  10 0.25 0.8859 0.8954 
+coverage for  10 0.5 0.7735 0.7973 
+coverage for  10 0.9 0.3734 0.4357 
+coverage for  100 -0.9 0.9998 1 
+coverage for  100 -0.5 0.9934 0.9928 
+coverage for  100 -0.25 0.9781 0.9757 
+coverage for  100 0 0.942 0.9411 
+coverage for  100 0.25 0.8809 0.8868 
+coverage for  100 0.5 0.77 0.7973 
+coverage for  100 0.9 0.3687 0.4297 
+> beta = c(5,30)
+> for(sig in sigmas){
++   for(rho in rhos)
++   {
++     cat("coverage for ", sig, rho, probs(sig,rho),"\n")
++   }
++ }
+coverage for  0.1 -0.9 1 1 
+coverage for  0.1 -0.5 0.9952 0.993 
+coverage for  0.1 -0.25 0.9772 0.9754 
+coverage for  0.1 0 0.9391 0.9394 
+coverage for  0.1 0.25 0.8797 0.8887 
+coverage for  0.1 0.5 0.7707 0.7948 
+coverage for  0.1 0.9 0.3805 0.433 
+coverage for  1 -0.9 0.9999 0.9999 
+coverage for  1 -0.5 0.9962 0.9934 
+coverage for  1 -0.25 0.9802 0.9756 
+coverage for  1 0 0.9405 0.9397 
+coverage for  1 0.25 0.8864 0.8894 
+coverage for  1 0.5 0.7804 0.7983 
+coverage for  1 0.9 0.3742 0.4331 
+coverage for  10 -0.9 0.9999 1 
+coverage for  10 -0.5 0.9964 0.9941 
+coverage for  10 -0.25 0.9797 0.9758 
+coverage for  10 0 0.9431 0.9418 
+coverage for  10 0.25 0.8827 0.8877 
+coverage for  10 0.5 0.7718 0.7935 
+coverage for  10 0.9 0.3681 0.4421 
+coverage for  100 -0.9 0.9998 0.9998 
+coverage for  100 -0.5 0.9949 0.9953 
+coverage for  100 -0.25 0.978 0.9768 
+coverage for  100 0 0.9436 0.9419 
+coverage for  100 0.25 0.882 0.8859 
+coverage for  100 0.5 0.7739 0.7891 
+coverage for  100 0.9 0.3684 0.4307 

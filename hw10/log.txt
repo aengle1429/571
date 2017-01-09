@@ -1,0 +1,50 @@
+display(log)
+check(C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/seizbugscode.txt)
+model is syntactically correct
+data(C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/data.txt)
+data loaded
+set.seed(4)
+compile(2)
+model compiled
+inits(1,C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/inits1.txt)
+chain initialized but other chain(s) contain uninitialized variables
+inits(2,C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/inits2.txt)
+model is initialized
+gen.inits()
+command #Bugs:gen.inits cannot be executed (is greyed out)
+thin.updater(1)
+update(6000)
+set(beta0)
+set(beta1)
+set(beta2)
+set(beta3)
+set(taub)
+set(tauY)
+set(deviance)
+dic.set()
+update(194000)
+coda(*,C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/coda)
+stats(*)
+
+Node statistics
+	 node	 mean	 sd	 MC error	2.5%	median	97.5%	start	sample
+	beta0	27.34	2.346	0.01086	22.74	27.34	31.94	6001	388000
+	beta1	-0.003996	100.1	0.1602	-196.0	-0.1871	196.7	6001	388000
+	beta2	-4.828	0.4888	7.874E-4	-5.786	-4.828	-3.868	6001	388000
+	beta3	-0.0459	100.0	0.152	-195.8	-0.1366	196.1	6001	388000
+	deviance	2296.0	12.48	0.02422	2274.0	2295.0	2322.0	6001	388000
+	tauY	0.007159	6.614E-4	1.26E-6	0.00592	0.007139	0.008511	6001	388000
+	taub	0.006165	0.001359	3.107E-6	0.003876	0.006037	0.00919	6001	388000
+dic.stats()
+
+DIC
+Dbar = post.mean of -2logL; Dhat = -2LogL at post.mean of stochastic nodes
+	Dbar	Dhat	pD	DIC	
+y	2295.810	2242.870	52.938	2348.750	
+total	2295.810	2242.870	52.938	2348.750	
+history(*,C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/history.odc)
+
+History
+
+save(C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/log.odc)
+save(C:/Users/aengl_000/Dropbox/UW2015-2016/Win2016/571/hw10/log.txt)

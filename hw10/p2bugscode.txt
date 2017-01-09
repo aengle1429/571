@@ -1,0 +1,20 @@
+model
+{
+	for(i in 1:447) # i indexes observations
+	{
+		y[i] ~ dnorm(mu[i],tauY)
+		mu[i] <- int[i] + beta1*trt[i] + slope[i]*time[i]
+		int[i] <- beta0 + b0[id[i]]
+		slope[i] <- beta2 + beta3*trt[i]
+	}
+	for(j in 1:103)
+	{
+		b0[j] ~ dnorm(0,taub)
+	}
+	taub ~ dgamma(0.1,0.1)
+	tauY ~ dgamma(0.1, 0.1) # prior on 1/Var(Y|b)
+	beta0 ~ dnorm(0,0.0001) # priors on Fixed Effs
+	beta1 ~ dnorm(0,0.0001)
+	beta2 ~ dnorm(0,0.0001)
+	beta3 ~ dnorm(0,0.0001)
+}
